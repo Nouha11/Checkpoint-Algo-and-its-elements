@@ -1,0 +1,25 @@
+ALGORITHM checkpoint
+VAR
+ch : STRING;
+i,count,c2,c3: INTEGER;
+
+BEGIN
+    count = 0;
+    c2 := 0;
+    c3 := 0;
+
+    REPEAT
+        c3 := c3 +1;
+    UNTIL (ch[c3] = "." )
+
+    FOR i FROM 0 TO c3 STEP step  DO
+        IF ((ch[i] = "a") or (ch[i] = "A") or (ch[i] = "o") or (ch[i] = "O") or (ch[i] = "e") or (ch[i] = "E") or (ch[i] = "i") or (ch[i] = "I") or or (ch[i] = "u") or (ch[i] = "U") or (ch[i] = "y") or (ch[i] = "Y") or (ch[i] = "w") or (ch[i] = "W") ) THEN
+            count := count + 1;
+        ELSE_IF (ch[i] = " ") THEN
+            c2 := c2 +1;
+        END_IF 
+    END_FOR
+    Write("vowels " + count);
+    Write("words " + c2);
+    Write("length of sentence" + c3);
+END
